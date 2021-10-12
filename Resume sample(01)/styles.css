@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 754px;  
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+   
+}
+
+.container .leftside{
+    position: relative;
+    background-color: #003147;
+    padding: 40px;
+}
+
+.container .rightside{
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+}
+
+ul{
+    position: relative;
+}
+
+ ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    color: #03a9f4;
+}
+
+
+/* ------------------LEFT SECTION------------------------------------ */
+.profile{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(225,225,225,0.2) ;
+}
+
+.profile .image{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile .image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.profile h2{
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4rem;
+}
+
+.profile h2 span{
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+}
+
+.contact{
+    padding-top: 40px;
+}
+
+.titleleft{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.0625rem;
+    margin-bottom: 20px;
+}
+
+.contact ul li{
+    cursor: pointer;
+}
+
+.contact ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 1.125rem;
+    color: #03a9f4;
+}
+
+.contact ul li span{
+    color: #fff;
+    font-weight: 300;
+}
+
+.contact.education li{
+    margin-bottom: 15px;
+}
+
+.contact.education h5{
+    color: #03a9f4;
+    font-weight: 500;
+}
+
+.contact.education h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+
+.contact.education h4{
+    color: #fff;
+    font-weight: 300;
+}
+
+.contact.language .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.contact.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #03a9f4;
+} 
+
+
+/* ------------------RIGHT SECTION------------------------------------ */
+.about{
+    margin-bottom: 40px;
+}
+
+.about:last-child{
+    margin-bottom: 0px;
+}
+
+.titleright{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 0.063rem;
+    margin-bottom: 10px;
+}
+
+.about p{
+    color: #333;
+    padding-bottom: 4px;
+}
+
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.about .box .development{
+    min-width: 150px;
+}
+
+.about .box .development h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+
+.about .box .text h4{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 1rem;
+}
+
+.about.skills .text{
+    padding-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.about.skills ul li span{
+    color: #848c90;
+    font-weight: 600;
+}
+
+.about.skills .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: #f0f0f0;
+    display: block;
+    margin-top: 5px;
+}
+
+.about.skills .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #03a9f4;
+} 
+
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.interest ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.interest ul li .fa{
+    color: #03a9f4;
+    font-size: 1.125rem;
+    width: 20px;
+    margin: 6px;
+}
+
+
+/* ------------------RESPONSIVE SECTION------------------------------------ */
+@media(max-width:1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .yearcompany{
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+      .interest ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
